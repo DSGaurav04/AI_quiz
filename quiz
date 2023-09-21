@@ -1,1 +1,37 @@
+import random
+
+# Define the questions and answers
+questions = [
+    "What is machine learning?",
+    "What are the different types of machine learning algorithms?",
+    "What is the difference between supervised and unsupervised learning?",
+    "What is a neural network?",
+    "What is a decision tree?",
+]
+
+answers = [
+    "Machine learning is a field of computer science that gives computers the ability to learn without being explicitly programmed.",
+    "The different types of machine learning algorithms include supervised learning, unsupervised learning, and reinforcement learning.",
+    "Supervised learning is a type of machine learning where the algorithm is trained on a set of labeled data. Unsupervised learning is a type of machine learning where the algorithm is trained on a set of unlabeled data.",
+    "A neural network is a type of machine learning algorithm that is inspired by the structure and function of the human brain.",
+    "A decision tree is a type of machine learning algorithm that is used to classify data.",
+]
+
+# Shuffle the questions and answers
+random.shuffle(questions)
+random.shuffle(answers)
+
+# Create a quiz
+quiz = []
+for i in range(len(questions)):
+    quiz.append((questions[i], answers[i]))
+
+# Print the quiz
+for question, answer in quiz:
+    print(question)
+    print("A.", answer)
+    print("B.", random.choice(answers))
+    print("C.", random.choice(answers))
+    print("D.", random.choice(answers))
+    print()
 
